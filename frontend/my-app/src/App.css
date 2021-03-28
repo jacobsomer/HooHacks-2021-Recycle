@@ -13,6 +13,46 @@
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  #clutter {
+    animation: clutter infinite 20s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Conveyor {
+    animation: conveyor infinite 5s linear;
+    
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .Conveyor1 {
+    animation: conveyor infinite 5s linear;
+    animation-delay: -3.75s;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Conveyor2 {
+    animation: conveyor infinite 5s linear;
+    animation-delay: -2.5s;
+    
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Conveyor3 {
+    animation: conveyor infinite 5s linear;
+    animation-delay: -1.25s;
+    
+  }
+}
+
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -37,6 +77,40 @@
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
+.Conveyor {
+  position:absolute;
+  max-width:23vh;
+  max-height:23vh;
+  top:250vh;
+  left:25vw;
+  font-size:5vh; 
+}
+.Conveyor1 {
+  position:absolute;
+  max-width:23vh;
+  max-height:23vh;
+  top:250vh;
+  left:25vw;
+  font-size:5vh; 
+}
+
+.Conveyor2 {
+  position:absolute;
+  max-width:23vh;
+  max-height:23vh;
+  top:250vh;
+  left:25vw;
+  font-size:5vh; 
+}
+
+.Conveyor3 {
+  position:absolute;
+  max-width:23vh;
+  max-height:23vh;
+  top:250vh;
+  left:25vw;
+  font-size:5vh; 
+}
 
 #plastic{
   background: url(./images/plastic.jpg) no-repeat center center;
@@ -49,6 +123,27 @@
 #solution{
   position: relative;
 }
+
+#button{
+  mix-blend-mode: multiply;
+}
+.basket {
+  transition: opacity 1.5s ease-in;
+  opacity: 1;
+}
+.basket.hide {
+  opacity: 0;
+  pointer-events:none;
+}
+.basket1 {
+  transition: opacity 2.5s ease-in;
+  opacity: 1;
+}
+.basket1.hide {
+  opacity: 0;
+  pointer-events:none;
+}
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
@@ -58,6 +153,7 @@
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -66,3 +162,56 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes clutter {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes conveyor {
+  0%  {
+    position:absolute;
+    opacity: 1;
+    max-width:23vh;
+    max-height:23vh;
+    top:250vh;
+    left:25vw;
+    font-size:5vh; 
+  }
+  50%{
+    position:absolute;
+    opacity: 1;
+    max-width:23vh;
+    max-height:23vh;
+    top:250vh;
+    left:40vw;
+    font-size:5vh; 
+  
+  }
+  75%{
+    position:absolute;
+    opacity: 0;
+    max-width:23vh;
+    max-height:23vh;
+    top:250vh;
+    left:40vw;
+    font-size:5vh; 
+  
+  }
+  
+  100%{
+    position:absolute;
+    opacity: 0;
+    max-width:23vh;
+    max-height:23vh;
+    top:250vh;
+    left:25vw;
+    font-size:5vh; 
+  
+  }
+}
+

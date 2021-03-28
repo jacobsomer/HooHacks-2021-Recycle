@@ -44,10 +44,7 @@ class ParticleAnimation extends Component {
                 enable: true,
                 mode: "push",
               },
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
+             
               resize: true,
             },
             modes: {
