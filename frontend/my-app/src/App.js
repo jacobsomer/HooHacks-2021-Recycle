@@ -122,12 +122,27 @@ function App() {
       
       <>
         <Navbar bg='dark' variant="dark" fixed="top" >
-          <Navbar.Brand href="#home" >HooHacks 2021 Recycle</Navbar.Brand>
+          <Navbar.Brand href="#home" onClick={() => {setPage(false);scroller.scrollTo('App-header', {
+              duration: 800,
+              delay: 0,
+              smooth: 'easeInOutQuart'
+            })} }>HooHacks 2021 Recycle</Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link href="#home" onClick={() => {setColor("secondary");setPage(false);} }>Home</Nav.Link>
-            <Nav.Link href="#features" onClick={() => setPage(true)}>Demo </Nav.Link>
-            <Nav.Link href="#pricing" >About</Nav.Link>
-            <Nav.Link href="#pricing">{scrollPosition}</Nav.Link>
+            <Nav.Link href="#home" onClick={() => {setColor("secondary");setPage(false);;scroller.scrollTo('App-header', {
+              duration: 800,
+              delay: 0,
+              smooth: 'easeInOutQuart'
+            });} }>Home</Nav.Link>
+            <Nav.Link href="#features" onClick={() => {setPage(true);scroller.scrollTo('random', {
+              duration: 800,
+              delay: 0,
+              smooth: 'easeInOutQuart'
+            });}}>Demo </Nav.Link>
+            <Nav.Link href="#pricing" onClick={() => scroller.scrollTo('About', {
+              duration: 800,
+              delay: 0,
+              smooth: 'easeInOutQuart'
+            })}>About</Nav.Link>
           </Nav>
         </Navbar>
       </>
@@ -308,18 +323,99 @@ function App() {
               🔋🔋🔋🔋
             </div>
           </div>
+          <div >
+            <div style={{color:'white',position:'absolute',top:'280vh',fontSize:'3vh',textAlign:'center'}}>
+              With the power of neural networks, we can build machines to sort through our trash. Not only will this benefit the environment, but this will also improve the health, safety, and sustainability of humankind.
+            </div>
+          </div>
           <Image id="net" src={earth} 
           style={{position:'absolute',maxWidth:'40vw',maxHeight:'30vh',top:'220vh',left:'40vw'}}fluid/>
           </div>
+          
       </div> 
    </>
-      :<div style={{position:'absolute',top:'20vh',left:'0vw'}}>
-        <Demo /></div>}
+      :<div className="random" style={{backgroundColor:'#282c34',width:'100vw',height:'100vh'}}><div>
+        <Demo /></div></div>}
+        <div className="About" style={{backgroundColor:'#282c34',width:'100vw',height:'100vh'}}>
+          <h1 style={{color:'white',position:'relative',top:'10vh'}}>
+          About
+          </h1>
+          <h3 style={{color:'white',position:'relative',top:'10vh'}}>
+          Paige - Fronted Developer and Presentation
+          </h3>
+          <li style={{color:'white',position:'relative',top:'10vh'}}>
+          aph3gx@virginia.edu
+          </li>
+          <li style={{color:'white',position:'relative',top:'10vh'}}>
+          <a href="https://www.linkedin.com/in/paige-hipes" bg="primary" target="_blank" style={{position:'relative',top:''}}>
+          Linkedin
+          </a>
+          </li>
+          
+          <h3 style={{color:'white',position:'relative',top:'10vh'}}>
+          
+          Sakshi - Deep Learning and Research
+          </h3>
+          <li style={{color:'white',position:'relative',top:'10vh'}}>
+          sakshishantilal@gmail.com
+          </li> 
+          <li style={{color:'white',position:'relative',top:'10vh'}}>
+          <a href="https://www.linkedin.com/in/sakshi-jain-8477201b7" bg="primary" target="_blank" style={{position:'relative',top:''}}>
+          Linkedin
+          </a>
+          </li>
+          
+          <h3 style={{color:'white',position:'relative',top:'10vh'}}>
+          Joseph Lee - Deep Learning and Research
+          </h3>
+          <li style={{color:'white',position:'relative',top:'10vh'}}>
+          jslee08@email.wm.edu    
+          </li>
+          <li style={{color:'white',position:'relative',top:'10vh'}}>
+          <a href="https://www.linkedin.com/in/joelee98/" bg="primary" target="_blank" style={{position:'relative',top:''}}>
+          Linkedin    
+          </a>
+          </li>
+          
+          <li style={{color:'white',position:'relative',top:'10vh'}}>
+          <a href="https://github.com/joegenius98" bg="primary" target="_blank" style={{position:'relative',top:''}}>
+          Github
+          </a>
+          </li>
+          
+          <h3 style={{color:'white',position:'relative',top:'10vh'}}>
+          Jacob Somer - Frontend Developer and Deep Learning
+          </h3>
+          <li style={{color:'white',position:'relative',top:'10vh'}}>
+          jsomer@email.wm.edu
+          </li>
+          <li style={{color:'white',position:'relative',top:'10vh'}}>
+          <a href="https://www.linkedin.com/in/jacob-somer-a722b51a7/" bg="primary" target="_blank" style={{position:'',top:''}}>
+          Linkedin
+          </a>
+          </li>
+          <li style={{color:'white',position:'relative',top:'10vh'}}>
+          <a href="https://github.com/jacobsomer" bg="primary" target="_blank" style={{position:'',top:''}}>
+          Github
+          </a>
+          </li>
+         
+         
+
+          <h3 style={{color:'white',position:'relative',top:'10vh'}}>
+          Project Repository
+          </h3><a href="https://github.com/jacobsomer" bg="primary" target="_blank" style={{position:'relative',top:'10vh'}}>
+          Code for this project
+          </a>
+          
+      </div>
     </div>
     
     
     </>
+    
   );
+  
 }
 
 export default App;
