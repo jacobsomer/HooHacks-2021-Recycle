@@ -157,7 +157,7 @@ function App() {
           <div id="container" style={{position:'absolute'}}>
             <div className="typewriter" >
               <h3>  
-                Welcome to Blank a Hoohacks 2021 Project
+                Welcome to MLRecycle a Hoohacks 2021 Project
               </h3>
             </div>
             <div style={{postion:'absolute'}}>
